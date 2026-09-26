@@ -1,78 +1,59 @@
-🎮 EmojiGuesser
+# GameGuesser 🎮
 
-EmojiGuesser to interaktywna gra przeglądarkowa oparta na logice popularnych "guesserów" (jak Wordle). Zadaniem gracza jest odgadnięcie tytułu gry wideo na podstawie zestawu 5 emotikon. Projekt został stworzony z naciskiem na płynność działania, czystą architekturę i nowoczesny interfejs użytkownika.
+An interactive browser-based game that tests your video game knowledge. Guess titles based on image fragments, descriptions, or trivia, rack up points, and beat your own high scores!
 
-✨ Funkcjonalności
+## ✨ Features
 
-Nieskończony tryb (Endless Mode): Możliwość losowania nowych zagadek bez ograniczeń czasowych.
+* **Diverse Game Modes:** Guess games from partial images, blurred covers, or text clues.
+* **Scoring System:** Track your performance and aim for a new personal best.
+* **Smooth Animations:** Highly interactive and engaging user interface.
+* **Built-in Database:** Features a wide variety of titles, from retro classics to modern AAA releases, stored directly in the app.
+* **Responsive Design:** Fully responsive layout that works flawlessly on mobile, tablet, and desktop.
 
-Baza Zagadek: Prawie 100 unikalnych, ręcznie przygotowanych zestawów emotikon dla najpopularniejszych gier wideo.
+## 🛠️ Tech Stack
 
-Inteligentna Wyszukiwarka: Pole tekstowe z dynamicznym filtrowaniem i autouzupełnianiem (Fuzzy Search), zapobiegające literówkom.
+* **Frontend:** React, TypeScript
+* **Build Tool:** Vite
+* **Styling:** Tailwind CSS
+* **Data Management:** Local JSON/TS files (`puzzles.json`, `gamesList.ts`)
 
-Progresywne Podpowiedzi: Każda z 5 prób odkrywa kolejną emotikonę.
+## 🚀 Getting Started
 
-Zaawansowany UI/UX: Responsywny design, autorskie animacje CSS (efekt wstrząsu przy porażce, płynne odsłanianie kafelków) oraz system konfetti nagradzający gracza za zwycięstwo.
+Follow these instructions to get a copy of the project up and running on your local machine. You don't need to install any browser extensions or Tailwind globally – npm will handle everything.
 
-🛠️ Technologie
+### Prerequisites
 
-Projekt został zbudowany przy użyciu nowoczesnego ekosystemu frontendowego:
+* [Node.js](https://nodejs.org/) installed on your machine.
 
-React 18 – Zarządzanie stanem i renderowanie komponentów.
+### Installation
 
-TypeScript – Silne typowanie i bezpieczeństwo kodu (interfejsy zagadek i stanu gry).
+1. **Clone the repository:**
 
-Vite – Ultraszybki bundler i serwer deweloperski.
+        git clone https://github.com/s0uru/gameguesser.git
+        cd gameguesser
 
-Tailwind CSS (v4) – Stylowanie oparte na klasach narzędziowych i implementacja własnych animacji kluczowych (keyframes).
+2. **Install dependencies:**
 
-react-confetti – Efekty cząsteczkowe przy ekranie wygranej.
+        npm install
 
-🚀 Uruchomienie lokalne
+3. **Run the development server:**
 
-Aby uruchomić projekt na własnej maszynie, wykonaj poniższe kroki:
+        npm run dev
 
-Sklonuj repozytorium:
+4. **Open the application:**
+   Open your browser and navigate to the localhost address provided in your terminal (usually `http://localhost:5173`).
 
-git clone https://github.com/s0uru/gameguesser.git
+## 📁 Project Structure
 
+    src/
+    ├── assets/        # Static files and images
+    ├── components/    # Reusable UI components (e.g., SearchBar)
+    ├── data/          # Game data and puzzles (gamesList.ts, puzzles.json)
+    ├── types/         # TypeScript definitions (game.ts)
+    ├── App.tsx        # Main application component
+    └── main.tsx       # Application entry point
 
-Przejdź do folderu z projektem:
+## 👤 Author
 
-cd gameguesser
-
-
-Zainstaluj wymagane zależności:
-
-npm install
-
-
-Uruchom serwer deweloperski:
-
-npm run dev
-
-
-Otwórz w przeglądarce adres http://localhost:5173.
-
-📂 Architektura Projektu
-
-src/
-├── components/     # Reużywalne klocki interfejsu (np. SearchBar)
-├── data/           # Statyczna baza danych (JSON zagadek, lista gier)
-├── types/          # Interfejsy TypeScript (kontrakty danych)
-├── App.tsx         # Główny komponent z logiką i pętlą gry
-├── index.css       # Konfiguracja Tailwinda i własne animacje kluczowe
-└── main.tsx        # Punkt wejścia aplikacji
-
-
-🎮 Zasady gry
-
-Gra wyświetla 5 pustych kafelków – na początku odkryty jest tylko pierwszy.
-
-Spróbuj odgadnąć grę wpisując jej tytuł w pole wyszukiwania. Wyszukiwarka podpowie Ci poprawne nazwy.
-
-Jeśli nie zgadniesz, tracisz próbę, a kolejna emotikona zostaje odsłonięta.
-
-Masz maksymalnie 5 prób na poprawne odgadnięcie tytułu.
-
-Po zakończeniu możesz zagrać ponownie, klikając przycisk "Play Again".
+**Jakub Pietrusiak**
+* GitHub: [@s0uru](https://github.com/s0uru)
